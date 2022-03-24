@@ -14,7 +14,7 @@ public class PrimeList {
 
         ArrayList<Integer> primes = new ArrayList<>();
 
-        for (int i = 1; i < bound; i++) {
+        for (int i = 1; i <= bound; i++) {
             if (isPrime(i)) {
                 primes.add(i);
             }
