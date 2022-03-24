@@ -1,4 +1,4 @@
-package lab4.algorithms;
+package lab4.sortandsearch;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -29,6 +29,7 @@ public class BinarySearch {
     }
 
     public static boolean binarySearch(int[] array, int key, int fromIdx, int toIdx) {
+        if (fromIdx == toIdx) return false; // Terminating empty list
         if (fromIdx == toIdx - 1) return key == array[fromIdx]; // Terminating one-element list
 
         int middleIdx = (fromIdx + toIdx) / 2;

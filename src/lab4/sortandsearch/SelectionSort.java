@@ -1,4 +1,4 @@
-package lab4.algorithms;
+package lab4.sortandsearch;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -19,7 +19,7 @@ public class SelectionSort {
 
     public static void selectionSort(int[] array) {
         int n = array.length;
-        if (n == 1) return;
+        if (n == 0 || n == 1) return;
 
         int tmp;
         for (int i = 0; i < n - 1; i++) {

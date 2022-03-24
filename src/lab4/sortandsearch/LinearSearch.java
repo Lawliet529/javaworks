@@ -1,4 +1,4 @@
-package lab4.algorithms;
+package lab4.sortandsearch;
 
 import java.util.Arrays;
 import java.util.Random;
