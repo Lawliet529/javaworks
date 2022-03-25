@@ -15,7 +15,7 @@ public class WordGuess {
         try {
             File words = new File("src/lab4/more/words.txt");
             Scanner reader = new Scanner(words);
-            for (int i = 0; i < new Random().nextInt(853); i++) {
+            for (int i = 0; i < new Random().nextInt(851); i++) {
                 reader.nextLine();
             }
             secretWord = reader.nextLine();
