@@ -10,7 +10,7 @@ public class NumberConversion {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter a number and radix: ");
-        String in = input.nextLine().toUpperCase();
+        String inStr = input.nextLine().toUpperCase();
         System.out.print("Enter the input radix: ");
         int inRadix = input.nextInt();
         System.out.print("Enter the output radix: ");
@@ -18,12 +18,12 @@ public class NumberConversion {
         input.nextLine();
         input.close();
 
-        System.out.println("\"" + in + "\" in radix " + inRadix +
-                " is \"" + toRadix(in, inRadix, outRadix) + "\" in radix " + outRadix + ".");
+        System.out.println("\"" + inStr + "\" in radix " + inRadix +
+                " is \"" + toRadix(inStr, inRadix, outRadix) + "\" in radix " + outRadix + ".");
     }
 
-    public static String toRadix(String in, int inRadix, int outRadix) {
-        int decimal =  toDecimal(in, inRadix);
+    public static String toRadix(String inStr, int inRadix, int outRadix) {
+        int decimal = toDecimal(inStr, inRadix);
 
         // Determine the length of output string
         int length = 1;
