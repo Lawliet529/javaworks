@@ -120,98 +120,116 @@ public class Matrix {
      * Adds 2 matrices.
      */
     public static int[][] add(int[][] matrix1, int[][] matrix2) {
-        if (Matrix.haveSameDimension(matrix1, matrix2)) {
-            int numRows = matrix1.length;
-            int numCols = matrix1[0].length;
-            int[][] sumMatrix = new int[numRows][numCols];
-            for (int row = 0; row < numRows; row++) {
-                for (int col = 0; col < numCols; col++) {
-                    sumMatrix[row][col] = matrix1[row][col] + matrix2[row][col];
-                }
+        if (!Matrix.haveSameDimension(matrix1, matrix2)) {
+            return null;
+        }
+
+        int numRows = matrix1.length;
+        int numCols = matrix1[0].length;
+        int[][] sumMatrix = new int[numRows][numCols];
+
+        for (int row = 0; row < numRows; row++) {
+            for (int col = 0; col < numCols; col++) {
+                sumMatrix[row][col] = matrix1[row][col] + matrix2[row][col];
             }
-            return sumMatrix;
-        } else return null;
+        }
+        return sumMatrix;
     }
 
     public static double[][] add(double[][] matrix1, double[][] matrix2) {
-        if (Matrix.haveSameDimension(matrix1, matrix2)) {
-            int numRows = matrix1.length;
-            int numCols = matrix1[0].length;
-            double[][] sumMatrix = new double[numRows][numCols];
-            for (int row = 0; row < numRows; row++) {
-                for (int col = 0; col < numCols; col++) {
-                    sumMatrix[row][col] = matrix1[row][col] + matrix2[row][col];
-                }
+        if (!Matrix.haveSameDimension(matrix1, matrix2)) {
+            return null;
+        }
+
+        int numRows = matrix1.length;
+        int numCols = matrix1[0].length;
+        double[][] sumMatrix = new double[numRows][numCols];
+
+        for (int row = 0; row < numRows; row++) {
+            for (int col = 0; col < numCols; col++) {
+                sumMatrix[row][col] = matrix1[row][col] + matrix2[row][col];
             }
-            return sumMatrix;
-        } else return null;
+        }
+        return sumMatrix;
     }
 
     /**
      * Subtracts 2 matrices.
      */
     public static int[][] subtract(int[][] matrix1, int[][] matrix2) {
-        if (Matrix.haveSameDimension(matrix1, matrix2)) {
-            int numRows = matrix1.length;
-            int numCols = matrix1[0].length;
-            int[][] sumMatrix = new int[numRows][numCols];
-            for (int row = 0; row < numRows; row++) {
-                for (int col = 0; col < numCols; col++) {
-                    sumMatrix[row][col] = matrix1[row][col] - matrix2[row][col];
-                }
+        if (!Matrix.haveSameDimension(matrix1, matrix2)) {
+            return null;
+        }
+
+        int numRows = matrix1.length;
+        int numCols = matrix1[0].length;
+        int[][] sumMatrix = new int[numRows][numCols];
+
+        for (int row = 0; row < numRows; row++) {
+            for (int col = 0; col < numCols; col++) {
+                sumMatrix[row][col] = matrix1[row][col] - matrix2[row][col];
             }
-            return sumMatrix;
-        } else return null;
+        }
+        return sumMatrix;
     }
 
     public static double[][] subtract(double[][] matrix1, double[][] matrix2) {
-        if (Matrix.haveSameDimension(matrix1, matrix2)) {
-            int numRows = matrix1.length;
-            int numCols = matrix1[0].length;
-            double[][] sumMatrix = new double[numRows][numCols];
-            for (int row = 0; row < numRows; row++) {
-                for (int col = 0; col < numCols; col++) {
-                    sumMatrix[row][col] = matrix1[row][col] - matrix2[row][col];
-                }
+        if (!Matrix.haveSameDimension(matrix1, matrix2)) {
+            return null;
+        }
+
+        int numRows = matrix1.length;
+        int numCols = matrix1[0].length;
+        double[][] sumMatrix = new double[numRows][numCols];
+
+        for (int row = 0; row < numRows; row++) {
+            for (int col = 0; col < numCols; col++) {
+                sumMatrix[row][col] = matrix1[row][col] - matrix2[row][col];
             }
-            return sumMatrix;
-        } else return null;
+        }
+        return sumMatrix;
     }
 
     /**
      * Multiplies 2 matrices.
      */
     public static int[][] multiply(int[][] matrix1, int[][] matrix2) {
-        if (matrix1[0].length == matrix2.length) {
-            int numRows = matrix1.length;
-            int numCols = matrix2[0].length;
-            int[][] productMatrix = new int[numRows][numCols];
-            for (int row = 0; row < numRows; row++) {
-                for (int col = 0; col < numCols; col++) {
-                    productMatrix[row][col] = 0;
-                    for (int i = 0; i < matrix2.length; i++) {
-                        productMatrix[row][col] += matrix1[row][i] * matrix2[i][col];
-                    }
+        if (!(matrix1[0].length == matrix2.length)) {
+            return null;
+        }
+
+        int numRows = matrix1.length;
+        int numCols = matrix2[0].length;
+        int[][] productMatrix = new int[numRows][numCols];
+
+        for (int row = 0; row < numRows; row++) {
+            for (int col = 0; col < numCols; col++) {
+                productMatrix[row][col] = 0;
+                for (int i = 0; i < matrix2.length; i++) {
+                    productMatrix[row][col] += matrix1[row][i] * matrix2[i][col];
                 }
             }
-            return productMatrix;
-        } else return null;
+        }
+        return productMatrix;
     }
 
     public static double[][] multiply(double[][] matrix1, double[][] matrix2) {
-        if (matrix1[0].length == matrix2.length) {
-            int numRows = matrix1.length;
-            int numCols = matrix2[0].length;
-            double[][] productMatrix = new double[numRows][numCols];
-            for (int row = 0; row < numRows; row++) {
-                for (int col = 0; col < numCols; col++) {
-                    productMatrix[row][col] = 0;
-                    for (int i = 0; i < matrix2.length; i++) {
-                        productMatrix[row][col] += matrix1[row][i] * matrix2[i][col];
-                    }
+        if (!(matrix1[0].length == matrix2.length)) {
+            return null;
+        }
+
+        int numRows = matrix1.length;
+        int numCols = matrix2[0].length;
+        double[][] productMatrix = new double[numRows][numCols];
+
+        for (int row = 0; row < numRows; row++) {
+            for (int col = 0; col < numCols; col++) {
+                productMatrix[row][col] = 0;
+                for (int i = 0; i < matrix2.length; i++) {
+                    productMatrix[row][col] += matrix1[row][i] * matrix2[i][col];
                 }
             }
-            return productMatrix;
-        } else return null;
+        }
+        return productMatrix;
     }
 }
