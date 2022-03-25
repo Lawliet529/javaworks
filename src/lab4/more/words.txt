@@ -849,5 +849,3 @@ yes
 yesterday
 you
 young
-Bernhard
-Android
