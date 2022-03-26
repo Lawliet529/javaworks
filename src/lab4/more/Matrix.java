@@ -105,9 +105,7 @@ public class Matrix {
     }
   }
 
-  /**
-   * Checks if 2 matrices have the same dimension.
-   */
+  /** Checks if 2 matrices have the same dimension. */
   public static boolean haveSameDimension(int[][] matrix1, int[][] matrix2) {
     return matrix1.length == matrix2.length && matrix1[0].length == matrix2[0].length;
   }
@@ -116,9 +114,7 @@ public class Matrix {
     return matrix1.length == matrix2.length && matrix1[0].length == matrix2[0].length;
   }
 
-  /**
-   * Adds 2 matrices.
-   */
+  /** Adds 2 matrices. */
   public static int[][] add(int[][] matrix1, int[][] matrix2) {
     if (!Matrix.haveSameDimension(matrix1, matrix2)) {
       return null;
@@ -153,9 +149,7 @@ public class Matrix {
     return sumMatrix;
   }
 
-  /**
-   * Subtracts 2 matrices.
-   */
+  /** Subtracts 2 matrices. */
   public static int[][] subtract(int[][] matrix1, int[][] matrix2) {
     if (!Matrix.haveSameDimension(matrix1, matrix2)) {
       return null;
@@ -190,9 +184,7 @@ public class Matrix {
     return sumMatrix;
   }
 
-  /**
-   * Multiplies 2 matrices.
-   */
+  /** Multiplies 2 matrices. */
   public static int[][] multiply(int[][] matrix1, int[][] matrix2) {
     if (!(matrix1[0].length == matrix2.length)) {
       return null;
