@@ -10,10 +10,10 @@ public class TrigonometricSeries {
     public static void main(String[] args) {
         HashMap<String, Double> valuesOfX = new HashMap<>();
         valuesOfX.put("0", (double) 0);
-        valuesOfX.put("\u03C0/6", Math.PI / 6);
-        valuesOfX.put("\u03C0/4", Math.PI / 4);
-        valuesOfX.put("\u03C0/3", Math.PI / 3);
-        valuesOfX.put("\u03C0/2", Math.PI / 2);
+        valuesOfX.put("π/6", Math.PI / 6);
+        valuesOfX.put("π/4", Math.PI / 4);
+        valuesOfX.put("π/3", Math.PI / 3);
+        valuesOfX.put("π/2", Math.PI / 2);
 
         int numTerms = 10000;
 
