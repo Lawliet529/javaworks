@@ -1,4 +1,4 @@
-package lab1._1gettingstarted;
+package lab1.gettingstarted;
 
 /**
  * 1. Getting Started Exercises

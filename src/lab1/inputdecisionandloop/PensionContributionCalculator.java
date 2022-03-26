@@ -1,4 +1,4 @@
-package lab1._3inputdecisionandloop;
+package lab1.inputdecisionandloop;
 
 import java.util.Scanner;
 

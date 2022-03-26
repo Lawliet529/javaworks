@@ -1,4 +1,4 @@
-package lab1._2decisionandloop;
+package lab1.decisionandloop;
 
 /**
  * 2. Exercises on Decision and Loop
