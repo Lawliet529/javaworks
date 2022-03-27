@@ -84,9 +84,7 @@ public class Matrix {
     }
   }
 
-  /**
-   * Prints matrices.
-   */
+  /** Prints matrices. */
   public static void print(int[][] matrix) {
     for (int[] row : matrix) {
       for (int col : row) {
