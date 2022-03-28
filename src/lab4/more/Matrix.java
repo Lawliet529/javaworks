@@ -1,6 +1,5 @@
 package lab4.more;
 
-import java.util.Objects;
 import java.util.Random;
 
 /**
@@ -34,15 +33,15 @@ public class Matrix {
     if (Matrix.haveSameDimension(intMatrix1, intMatrix2)) {
       System.out.println("2 matrices have the same dimension.");
       System.out.println("Sum of 2 matrices:");
-      Matrix.print(Objects.requireNonNull(Matrix.add(intMatrix1, intMatrix2)));
+      Matrix.print(Matrix.add(intMatrix1, intMatrix2));
       System.out.println("Difference of 2 matrices:");
-      Matrix.print(Objects.requireNonNull(Matrix.subtract(intMatrix1, intMatrix2)));
+      Matrix.print(Matrix.subtract(intMatrix1, intMatrix2));
     } else {
       System.out.println("2 matrices don't have the same dimension.");
     }
     if (Matrix.multiply(intMatrix1, intMatrix2) != null) {
       System.out.println("2 matrices can be multiplied and the product is:");
-      Matrix.print(Objects.requireNonNull(Matrix.multiply(intMatrix1, intMatrix2)));
+      Matrix.print(Matrix.multiply(intMatrix1, intMatrix2));
     } else {
       System.out.println("2 matrices can not be multiplied.");
     }
@@ -70,15 +69,15 @@ public class Matrix {
     if (Matrix.haveSameDimension(doubleMatrix1, doubleMatrix2)) {
       System.out.println("2 matrices have the same dimension.");
       System.out.println("Sum of 2 matrices:");
-      Matrix.print(Objects.requireNonNull(Matrix.add(doubleMatrix1, doubleMatrix2)));
+      Matrix.print(Matrix.add(doubleMatrix1, doubleMatrix2));
       System.out.println("Difference of 2 matrices:");
-      Matrix.print(Objects.requireNonNull(Matrix.subtract(doubleMatrix1, doubleMatrix2)));
+      Matrix.print(Matrix.subtract(doubleMatrix1, doubleMatrix2));
     } else {
       System.out.println("2 matrices don't have the same dimension.");
     }
     if (Matrix.multiply(doubleMatrix1, doubleMatrix2) != null) {
       System.out.println("2 matrices can be multiplied and the product is:");
-      Matrix.print(Objects.requireNonNull(Matrix.multiply(doubleMatrix1, doubleMatrix2)));
+      Matrix.print(Matrix.multiply(doubleMatrix1, doubleMatrix2));
     } else {
       System.out.println("2 matrices can not be multiplied.");
     }
@@ -86,6 +85,10 @@ public class Matrix {
 
   /** Prints matrices. */
   public static void print(int[][] matrix) {
+    if (matrix == null) {
+      throw new NullPointerException();
+    }
+
     for (int[] row : matrix) {
       for (int col : row) {
         System.out.printf("%3d ", col);
@@ -95,6 +98,10 @@ public class Matrix {
   }
 
   public static void print(double[][] matrix) {
+    if (matrix == null) {
+      throw new NullPointerException();
+    }
+
     for (double[] row : matrix) {
       for (double col : row) {
         System.out.printf("%6.2f ", col);
