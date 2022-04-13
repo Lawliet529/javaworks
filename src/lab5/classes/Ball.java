@@ -1,5 +1,7 @@
 package lab5.classes;
 
+import java.util.StringJoiner;
+
 /**
  * 1. Exercises on Classes
  *
@@ -78,9 +80,11 @@ public class Ball {
 
   @Override
   public String toString() {
-    return "Ball{" +
-        "(" + x + "," + y + ")" +
-        ", speed=(" + deltaX + "," + deltaY +
-        ")}";
+    return new StringJoiner(", ", Ball.class.getSimpleName() + "[", "]")
+        .add("(" + x)
+        .add(y + ")")
+        .add("speed=(" + deltaX)
+        .add(deltaY + ")")
+        .toString();
   }
 }

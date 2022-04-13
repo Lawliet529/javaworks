@@ -1,5 +1,7 @@
 package lab5.classes;
 
+import java.util.StringJoiner;
+
 /**
  * 1. Exercises on Classes
  *
@@ -54,10 +56,10 @@ public class Employee {
 
   @Override
   public String toString() {
-    return "Employee{" +
-        "id=" + id +
-        ", name=" + '\'' + firstName + ' ' + lastName + '\'' +
-        ", salary=" + salary +
-        '}';
+    return new StringJoiner(", ", Employee.class.getSimpleName() + "[", "]")
+        .add("id=" + id)
+        .add("name='" + firstName + " " + lastName + "'")
+        .add("salary=" + salary)
+        .toString();
   }
 }

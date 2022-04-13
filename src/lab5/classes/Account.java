@@ -1,5 +1,7 @@
 package lab5.classes;
 
+import java.util.StringJoiner;
+
 /**
  * 1. Exercises on Classes
  *
@@ -63,10 +65,10 @@ public class Account {
 
   @Override
   public String toString() {
-    return "Account{" +
-        "id='" + id + '\'' +
-        ", name='" + name + '\'' +
-        ", balance=" + balance +
-        '}';
+    return new StringJoiner(", ", Account.class.getSimpleName() + "[", "]")
+        .add("id='" + id + "'")
+        .add("name='" + name + "'")
+        .add("balance=" + balance)
+        .toString();
   }
 }

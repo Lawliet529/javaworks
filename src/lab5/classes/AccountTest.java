@@ -12,15 +12,19 @@ class AccountTest {
     System.out.println("Name: " + account1.getName());
     System.out.println("Balance: " + account1.getBalance());
 
-    System.out.println(account1.credit(100));
-    System.out.println(account1.debit(50));
+    account1.credit(100);
+    System.out.println(account1);
+    account1.debit(50);
+    System.out.println(account1);
     try {
-      System.out.println(account1.debit(500));
+      account1.debit(500);
+      System.out.println(account1);
     } catch (ArithmeticException e) {
       System.out.println("Amount exceeded balance.");
     }
 
-    System.out.println(account1.transferTo(account2, 100));
+    account1.transferTo(account2, 100);
+    System.out.println(account1);
     System.out.println(account2);
   }
 }

@@ -1,5 +1,7 @@
 package lab5.classes;
 
+import java.util.StringJoiner;
+
 /**
  * 1. Exercises on Classes
  *
@@ -69,9 +71,9 @@ public class Circle {
 
   @Override
   public String toString() {
-    return "Circle{" +
-        "radius=" + radius +
-        ", color='" + color + '\'' +
-        '}';
+    return new StringJoiner(", ", Circle.class.getSimpleName() + "[", "]")
+        .add("radius=" + radius)
+        .add("color='" + color + "'")
+        .toString();
   }
 }

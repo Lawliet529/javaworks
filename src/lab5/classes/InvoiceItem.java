@@ -1,5 +1,7 @@
 package lab5.classes;
 
+import java.util.StringJoiner;
+
 /**
  * 1. Exercises on Classes
  *
@@ -58,11 +60,11 @@ public class InvoiceItem {
 
   @Override
   public String toString() {
-    return "InvoiceItem{" +
-        "id='" + id + '\'' +
-        ", desc='" + desc + '\'' +
-        ", qty=" + qty +
-        ", unitPrice=" + unitPrice +
-        '}';
+    return new StringJoiner(", ", InvoiceItem.class.getSimpleName() + "[", "]")
+        .add("id='" + id + "'")
+        .add("desc='" + desc + "'")
+        .add("qty=" + qty)
+        .add("unitPrice=" + unitPrice)
+        .toString();
   }
 }

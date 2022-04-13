@@ -1,5 +1,7 @@
 package lab5.classes;
 
+import java.util.StringJoiner;
+
 /**
  * 1. Exercises on Classes
  *
@@ -46,9 +48,9 @@ public class Rectangle {
 
   @Override
   public String toString() {
-    return "Rectangle{" +
-        "length=" + length +
-        ", width=" + width +
-        '}';
+    return new StringJoiner(", ", Rectangle.class.getSimpleName() + "[", "]")
+        .add("length=" + length)
+        .add("width=" + width)
+        .toString();
   }
 }
