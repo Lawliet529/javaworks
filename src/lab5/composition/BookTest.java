@@ -1,28 +1,28 @@
 package lab5.composition;
 
+import java.util.Arrays;
+
 class BookTest {
 
   public static void main(String[] args) {
-    Author ahTeck = new Author("Tan Ah Teck", "ahteck@npwhere.com", 'm');
-    System.out.println(ahTeck);
+    Author[] authors = new Author[2];
+    authors[0] = new Author("Tan Ah Teck", "ahteck@somewhre.com", 'm');
+    authors[1] = new Author("Paul Tan", "Paul@nowhere.com", 'm');
+    System.out.println(Arrays.toString(authors));
 
-    Book dummyBook = new Book("Java for dummy", ahTeck, 19.95, 99);
-    System.out.println(dummyBook);
+    Book javaDummy = new Book("Java for Dummy", authors, 19.99, 99);
+    System.out.println(javaDummy);
 
-    dummyBook.setPrice(29.95);
-    dummyBook.setQty(28);
-    System.out.println("name is: " + dummyBook.getName());
-    System.out.println("price is: " + dummyBook.getPrice());
-    System.out.println("qty is: " + dummyBook.getQty());
-    System.out.println("Author is: " + dummyBook.getAuthor());
-    System.out.println("Author's name is: " + dummyBook.getAuthor().getName());
-    System.out.println("Author's email is: " + dummyBook.getAuthor().getEmail());
+    javaDummy.setPrice(29.95);
+    javaDummy.setQty(28);
+    System.out.println("name is: " + javaDummy.getName());
+    System.out.println("price is: " + javaDummy.getPrice());
+    System.out.println("qty is: " + javaDummy.getQty());
+    System.out.println("Author is: " + Arrays.toString(javaDummy.getAuthors()));
 
-    Book anotherBook = new Book("more Java", new Author("Paul Tan", "paul@somewhere.com", 'm'),
+    Author[] anotherAuthors = {new Author("Paul Tan", "paul@somewhere.com", 'm')};
+    Book anotherBook = new Book("more Java", anotherAuthors,
         29.95);
     System.out.println(anotherBook);
-    System.out.println("Author's name is: " + anotherBook.getAuthorName());
-    System.out.println("Author's email is: " + anotherBook.getAuthorEmail());
-    System.out.println("Author's gender is: " + anotherBook.getAuthorGender());
   }
 }
