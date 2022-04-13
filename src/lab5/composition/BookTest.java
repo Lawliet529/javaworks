@@ -1,28 +1,21 @@
 package lab5.composition;
 
-import java.util.Arrays;
-
 class BookTest {
 
   public static void main(String[] args) {
-    Author[] authors = new Author[2];
-    authors[0] = new Author("Tan Ah Teck", "ahteck@somewhre.com", 'm');
-    authors[1] = new Author("Paul Tan", "Paul@nowhere.com", 'm');
-    System.out.println(Arrays.toString(authors));
+    Author author1 = new Author("Tan Ah Teck", "ahteck@somewhere.com");
 
-    Book javaDummy = new Book("Java for Dummy", authors, 19.99, 99);
-    System.out.println(javaDummy);
+    Book book1 = new Book("12345", "Java for dummies", author1, 8.8, 88);
+    System.out.println(book1);
 
-    javaDummy.setPrice(29.95);
-    javaDummy.setQty(28);
-    System.out.println("name is: " + javaDummy.getName());
-    System.out.println("price is: " + javaDummy.getPrice());
-    System.out.println("qty is: " + javaDummy.getQty());
-    System.out.println("Author is: " + Arrays.toString(javaDummy.getAuthors()));
-
-    Author[] anotherAuthors = {new Author("Paul Tan", "paul@somewhere.com", 'm')};
-    Book anotherBook = new Book("more Java", anotherAuthors,
-        29.95);
-    System.out.println(anotherBook);
+    book1.setPrice(9.9);
+    book1.setQty(99);
+    System.out.println(book1);
+    System.out.println("isbn is: " + book1.getIsbn());
+    System.out.println("name is: " + book1.getName());
+    System.out.println("price is: " + book1.getPrice());
+    System.out.println("author is: " + book1.getAuthor());
+    System.out.println("author's name: " + book1.getAuthorName());
+    System.out.println("author's email: " + book1.getAuthor().getEmail());
   }
 }
