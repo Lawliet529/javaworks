@@ -35,25 +35,22 @@ public class MyTriangle {
   }
 
   public double getPerimeter() {
-    MyLine edge1 = new MyLine(v1, v2);
-    MyLine edge2 = new MyLine(v2, v3);
-    MyLine edge3 = new MyLine(v3, v1);
-    return edge1.getLength() + edge2.getLength() + edge3.getLength();
+    return v1.distance(v2) + v2.distance(v3) + v3.distance(v1);
   }
 
   public String getType() {
-    MyLine edge1 = new MyLine(v1, v2);
-    MyLine edge2 = new MyLine(v2, v3);
-    MyLine edge3 = new MyLine(v3, v1);
+    double edge1 = v1.distance(v2);
+    double edge2 = v2.distance(v3);
+    double edge3 = v3.distance(v1);
 
-    if (edge1.getLength() == edge2.getLength()
-        && edge2.getLength() == edge3.getLength()) {
+    if (edge1 == edge2
+        && edge2 == edge3) {
       return "Equilateral";
     }
 
-    if (edge1.getLength() == edge2.getLength()
-        || edge2.getLength() == edge3.getLength()
-        || edge3.getLength() == edge1.getLength()) {
+    if (edge1 == edge2
+        || edge2 == edge3
+        || edge3 == edge1) {
       return "Isosceles";
     }
 
