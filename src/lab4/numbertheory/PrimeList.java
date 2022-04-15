@@ -11,8 +11,10 @@ import java.util.Scanner;
 public class PrimeList {
 
   public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
     System.out.print("Please enter the upper bound: ");
-    int bound = new Scanner(System.in).nextInt();
+    int bound = input.nextInt();
+    input.close();
 
     ArrayList<Integer> primes = new ArrayList<>();
 

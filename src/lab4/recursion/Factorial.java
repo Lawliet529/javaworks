@@ -10,8 +10,10 @@ import java.util.Scanner;
 public class Factorial {
 
   public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
     System.out.print("Enter a number: ");
-    int n = new Scanner(System.in).nextInt();
+    int n = input.nextInt();
+    input.close();
 
     System.out.println("The factorial of " + n + " is " + factorial(n));
   }

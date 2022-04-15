@@ -59,6 +59,7 @@ public class WordGuess {
       }
       System.out.println();
     }
+    input.close();
 
     System.out.println("Congratulation! The secret word is: " + secretWord);
     System.out.println("You got it in " + trials + " trials");
