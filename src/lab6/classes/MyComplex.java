@@ -105,7 +105,7 @@ public class MyComplex {
 
   public MyComplex multiply(MyComplex another) {
     real = real * another.getReal() - imag * another.getImag();
-    imag = real * another.getReal() + imag * another.getReal();
+    imag = real * another.getImag() + imag * another.getReal();
     return this;
   }
 
