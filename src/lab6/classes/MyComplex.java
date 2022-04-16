@@ -1,5 +1,6 @@
 package lab6.classes;
 
+import java.util.Objects;
 import java.util.StringJoiner;
 
 /**
@@ -22,8 +23,20 @@ public class MyComplex {
     this.imag = imag;
   }
 
+  public boolean isReal() {
+    return imag == 0;
+  }
+
+  public boolean isImaginary() {
+    return real == 0;
+  }
+
   public double getReal() {
     return real;
+  }
+
+  public void setReal(double real) {
+    this.real = real;
   }
 
   public double getImag() {
@@ -47,24 +60,14 @@ public class MyComplex {
         .toString();
   }
 
-  public boolean isReal() {
-    return imag == 0;
-  }
-
-  public void setReal(double real) {
-    this.real = real;
-  }
-
-  public boolean isImaginary() {
-    return real == 0;
-  }
-
   public boolean equals(double real, double imag) {
     return this.real == real
         && this.imag == imag;
   }
 
   public boolean equals(MyComplex another) {
+    Objects.requireNonNull(another);
+
     return real == another.getReal()
         && imag == another.getImag();
   }
@@ -74,12 +77,16 @@ public class MyComplex {
   }
 
   public MyComplex add(MyComplex right) {
+    Objects.requireNonNull(right);
+
     real += right.getReal();
     imag += right.getImag();
     return this;
   }
 
   public MyComplex addNew(MyComplex right) {
+    Objects.requireNonNull(right);
+
     return new MyComplex(
         real + right.getReal(),
         imag + right.getImag()
@@ -87,12 +94,16 @@ public class MyComplex {
   }
 
   public MyComplex subtract(MyComplex right) {
+    Objects.requireNonNull(right);
+
     real -= right.getReal();
     imag -= right.getImag();
     return this;
   }
 
   public MyComplex subtractNew(MyComplex right) {
+    Objects.requireNonNull(right);
+
     return new MyComplex(
         real - right.getReal(),
         imag - right.getImag()
@@ -104,12 +115,16 @@ public class MyComplex {
   }
 
   public MyComplex multiply(MyComplex another) {
+    Objects.requireNonNull(another);
+
     real = real * another.getReal() - imag * another.getImag();
     imag = real * another.getImag() + imag * another.getReal();
     return this;
   }
 
   public MyComplex divide(MyComplex another) {
+    Objects.requireNonNull(another);
+
     real = (real * another.getReal() + imag + another.getImag())
         / (Math.pow(another.getReal(), 2) + Math.pow(another.getImag(), 2));
     imag = (imag * another.getReal() - real * another.getImag())
