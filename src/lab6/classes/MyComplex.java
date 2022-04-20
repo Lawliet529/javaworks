@@ -68,45 +68,45 @@ public class MyComplex {
   public boolean equals(MyComplex another) {
     Objects.requireNonNull(another);
 
-    return real == another.getReal()
-        && imag == another.getImag();
+    return real == another.real
+        && imag == another.imag;
   }
 
   public double magnitude() {
     return Math.sqrt(real * real + imag * imag);
   }
 
-  public MyComplex add(MyComplex right) {
-    Objects.requireNonNull(right);
+  public MyComplex add(MyComplex another) {
+    Objects.requireNonNull(another);
 
-    real += right.getReal();
-    imag += right.getImag();
+    real += another.real;
+    imag += another.imag;
     return this;
   }
 
-  public MyComplex addNew(MyComplex right) {
-    Objects.requireNonNull(right);
+  public MyComplex addNew(MyComplex another) {
+    Objects.requireNonNull(another);
 
     return new MyComplex(
-        real + right.getReal(),
-        imag + right.getImag()
+        real + another.real,
+        imag + another.imag
     );
   }
 
-  public MyComplex subtract(MyComplex right) {
-    Objects.requireNonNull(right);
+  public MyComplex subtract(MyComplex another) {
+    Objects.requireNonNull(another);
 
-    real -= right.getReal();
-    imag -= right.getImag();
+    real -= another.real;
+    imag -= another.imag;
     return this;
   }
 
-  public MyComplex subtractNew(MyComplex right) {
-    Objects.requireNonNull(right);
+  public MyComplex subtractNew(MyComplex another) {
+    Objects.requireNonNull(another);
 
     return new MyComplex(
-        real - right.getReal(),
-        imag - right.getImag()
+        real - another.real,
+        imag - another.imag
     );
   }
 
@@ -117,18 +117,18 @@ public class MyComplex {
   public MyComplex multiply(MyComplex another) {
     Objects.requireNonNull(another);
 
-    real = real * another.getReal() - imag * another.getImag();
-    imag = real * another.getImag() + imag * another.getReal();
+    real = real * another.real - imag * another.imag;
+    imag = real * another.imag + imag * another.real;
     return this;
   }
 
   public MyComplex divide(MyComplex another) {
     Objects.requireNonNull(another);
 
-    real = (real * another.getReal() + imag + another.getImag())
-        / (Math.pow(another.getReal(), 2) + Math.pow(another.getImag(), 2));
-    imag = (imag * another.getReal() - real * another.getImag())
-        / (Math.pow(another.getReal(), 2) + Math.pow(another.getImag(), 2));
+    real = (real * another.real + imag + another.imag)
+        / (Math.pow(another.real, 2) + Math.pow(another.imag, 2));
+    imag = (imag * another.real - real * another.imag)
+        / (Math.pow(another.real, 2) + Math.pow(another.imag, 2));
     return this;
   }
 
