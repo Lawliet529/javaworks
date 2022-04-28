@@ -8,13 +8,12 @@ package lab4.more;
 public class DateUtil {
 
   // Month's name - for printing
-  public static String[] strMonths = {
-      "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-      "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-  };
+  public static String[] strMonths = {"Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                                      "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
 
   // Number of days in each month (for non-leap years)
-  public static int[] daysInMonths = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+  public static int[] daysInMonths = {31, 28, 31, 30, 31, 30,
+                                      31, 31, 30, 31, 30, 31};
 
   public static void main(String[] args) {
     System.out.println(isLeapYear(1900)); // false
