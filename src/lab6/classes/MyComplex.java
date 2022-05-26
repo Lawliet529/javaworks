@@ -125,10 +125,12 @@ public class MyComplex {
   public MyComplex divide(MyComplex another) {
     Objects.requireNonNull(another);
 
-    real = (real * another.real + imag + another.imag)
-        / (Math.pow(another.real, 2) + Math.pow(another.imag, 2));
-    imag = (imag * another.real - real * another.imag)
-        / (Math.pow(another.real, 2) + Math.pow(another.imag, 2));
+    real =
+        (real * another.real + imag + another.imag)
+            / (Math.pow(another.real, 2) + Math.pow(another.imag, 2));
+    imag =
+        (imag * another.real - real * another.imag)
+            / (Math.pow(another.real, 2) + Math.pow(another.imag, 2));
     return this;
   }
 

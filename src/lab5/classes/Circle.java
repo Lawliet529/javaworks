@@ -14,9 +14,7 @@ public class Circle {
   private double radius;
   private String color;
 
-  /**
-   * Constructs a Circle instance with the default value for radius and color.
-   */
+  /** Constructs a Circle instance with the default value for radius and color. */
   public Circle() {
     radius = 1.0;
     color = "red";
@@ -43,9 +41,7 @@ public class Circle {
     this.color = color;
   }
 
-  /**
-   * Returns the radius.
-   */
+  /** Returns the radius. */
   public double getRadius() {
     return radius;
   }
@@ -54,9 +50,7 @@ public class Circle {
     this.radius = radius;
   }
 
-  /**
-   * Returns the area of this Circle instance.
-   */
+  /** Returns the area of this Circle instance. */
   public double getArea() {
     return radius * radius * Math.PI;
   }

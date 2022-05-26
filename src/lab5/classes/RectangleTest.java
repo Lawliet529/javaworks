@@ -1,6 +1,5 @@
 package lab5.classes;
 
-
 class RectangleTest {
 
   public static void main(String[] args) {

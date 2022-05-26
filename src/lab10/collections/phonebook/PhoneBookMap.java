@@ -11,8 +11,10 @@ public class PhoneBookMap implements PhoneBook {
 
   @Override
   public Student searchByLastName(String s) {
-    return phoneBook.values().stream().filter(student -> student.getLastName().equals(s))
-        .findFirst().orElse(null);
+    return phoneBook.values().stream()
+        .filter(student -> student.getLastName().equals(s))
+        .findFirst()
+        .orElse(null);
   }
 
   @Override
@@ -22,8 +24,10 @@ public class PhoneBookMap implements PhoneBook {
 
   @Override
   public Student searchByName(String s) {
-    return phoneBook.values().stream().filter(student -> student.getName().equals(s))
-        .findFirst().orElse(null);
+    return phoneBook.values().stream()
+        .filter(student -> student.getName().equals(s))
+        .findFirst()
+        .orElse(null);
   }
 
   @Override

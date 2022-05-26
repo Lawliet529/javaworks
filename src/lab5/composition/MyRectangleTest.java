@@ -23,9 +23,7 @@ class MyRectangleTest {
     System.out.println("area = " + rectangle1.area());
     System.out.println(rectangle1.isSquare());
 
-    MyRectangle rectangle2 = new MyRectangle(
-        new MyPoint(0, 3), new MyPoint(4, 0)
-    );
+    MyRectangle rectangle2 = new MyRectangle(new MyPoint(0, 3), new MyPoint(4, 0));
     System.out.println(rectangle2);
     System.out.println("perimeter = " + rectangle2.perimeter());
     System.out.println("area = " + rectangle2.area());

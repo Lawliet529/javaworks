@@ -52,8 +52,6 @@ public class Container {
 
   @Override
   public String toString() {
-    return String.format("Container[(%d, %d), (%d, %d)]",
-        x1, y1, x2, y2
-    );
+    return String.format("Container[(%d, %d), (%d, %d)]", x1, y1, x2, y2);
   }
 }

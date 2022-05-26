@@ -76,8 +76,6 @@ public class Ball {
 
   @Override
   public String toString() {
-    return String.format("Ball[(%.2f, %.2f), speed=(%.2f, %.2f)]",
-        x, y, deltaX, deltaY
-    );
+    return String.format("Ball[(%.2f, %.2f), speed=(%.2f, %.2f)]", x, y, deltaX, deltaY);
   }
 }

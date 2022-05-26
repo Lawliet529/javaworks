@@ -1,8 +1,6 @@
 package lab5.classes;
 
-/**
- * A Test Driver for the Circle class.
- */
+/** A Test Driver for the Circle class. */
 class CircleTest {
 
   public static void main(String[] args) {
