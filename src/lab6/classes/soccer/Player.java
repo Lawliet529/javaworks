@@ -25,7 +25,11 @@ public class Player {
 
   public void jump(float zDisp) {
     z += zDisp;
-    z = 0;
+    fall();
+  }
+
+  public void fall() {
+    z = 0.0f;
   }
 
   public boolean near(Ball ball) {
@@ -41,11 +45,11 @@ public class Player {
       // Assume the ball flies a distance of 10
       float xDisp = 10 * (float) Math.cos(direction);
       float yDisp = 10 * (float) Math.sin(direction);
-      ball.setXYZ(
-          ball.getX() + xDisp,
-          ball.getY() + yDisp,
-          0
-      );
+      ball.setXYZ(ball.getX() + xDisp, ball.getY() + yDisp, 0);
     }
+  }
+
+  public String toString() {
+    return "Player no. " + number;
   }
 }
