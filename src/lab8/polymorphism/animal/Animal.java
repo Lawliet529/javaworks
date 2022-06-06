@@ -9,4 +9,8 @@ public abstract class Animal {
   }
 
   public abstract void greets();
+
+  public String toString() {
+    return name;
+  }
 }
