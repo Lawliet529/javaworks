@@ -71,7 +71,7 @@ public class MyLine {
   }
 
   public int[] getBeginXY() {
-    return new int[]{getBeginX(), getBeginY()};
+    return new int[] {getBeginX(), getBeginY()};
   }
 
   public void setBeginXY(int x, int y) {
@@ -79,7 +79,7 @@ public class MyLine {
   }
 
   public int[] getEndXY() {
-    return new int[]{getEndX(), getEndY()};
+    return new int[] {getEndX(), getEndY()};
   }
 
   public void setEndXY(int x, int y) {

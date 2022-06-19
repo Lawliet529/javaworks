@@ -3,7 +3,6 @@ package lab9;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.StringJoiner;
 
 public class ComparatorTest {
 
@@ -18,29 +17,20 @@ public class ComparatorTest {
     RatingCompare ratingCompare = new RatingCompare();
     list.sort(ratingCompare);
     for (Movie movie : list) {
-      System.out.println(new StringJoiner(" ")
-          .add(movie.getName())
-          .add(movie.getRating() + "")
-          .add(movie.getYear() + ""));
+      System.out.println(movie.getName() + " " + movie.getRating() + " " + movie.getYear());
     }
 
     System.out.println("\nSorted by name:");
     NameCompare nameCompare = new NameCompare();
     list.sort(nameCompare);
     for (Movie movie : list) {
-      System.out.println(new StringJoiner(" ")
-          .add(movie.getName())
-          .add(movie.getRating() + "")
-          .add(movie.getYear() + ""));
+      System.out.println(movie.getName() + " " + movie.getRating() + " " + movie.getYear());
     }
 
     System.out.println("\nSorted by year:");
     Collections.sort(list);
     for (Movie movie : list) {
-      System.out.println(new StringJoiner(" ")
-          .add(movie.getName())
-          .add(movie.getRating() + "")
-          .add(movie.getYear() + ""));
+      System.out.println(movie.getName() + " " + movie.getRating() + " " + movie.getYear());
     }
   }
 }

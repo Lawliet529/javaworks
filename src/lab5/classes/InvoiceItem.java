@@ -7,8 +7,7 @@ import java.util.StringJoiner;
  *
  * <p>1.5 The InvoiceItem Class
  *
- * <p>Class InvoiceItem models an item of an invoice, with ID, description, quantity and unit
- * price.
+ * <p>Class InvoiceItem models an item of an invoice, with ID, description, quantity and unit price.
  */
 public class InvoiceItem {
 
@@ -18,9 +17,9 @@ public class InvoiceItem {
   private double unitPrice;
 
   /**
-   * @param id        ID.
-   * @param desc      description.
-   * @param qty       quantity.
+   * @param id ID.
+   * @param desc description.
+   * @param qty quantity.
    * @param unitPrice unit price.
    */
   public InvoiceItem(String id, String desc, int qty, double unitPrice) {

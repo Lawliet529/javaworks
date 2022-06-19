@@ -1,7 +1,5 @@
 package lab7.composition;
 
-import java.util.StringJoiner;
-
 public class Point {
 
   private int x;
@@ -14,10 +12,7 @@ public class Point {
 
   @Override
   public String toString() {
-    return new StringJoiner(", ", "(", ")")
-        .add("" + x)
-        .add("" + y)
-        .toString();
+    return "(" + x + ", " + y + ")";
   }
 
   public int getX() {

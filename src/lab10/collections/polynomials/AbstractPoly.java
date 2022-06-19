@@ -4,8 +4,7 @@ import java.util.Arrays;
 
 public abstract class AbstractPoly implements Poly {
 
-  public AbstractPoly() {
-  }
+  public AbstractPoly() {}
 
   double[] derive() {
     return coefficients();

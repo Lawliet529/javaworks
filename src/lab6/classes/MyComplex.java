@@ -1,7 +1,6 @@
 package lab6.classes;
 
 import java.util.Objects;
-import java.util.StringJoiner;
 
 /**
  * 1. More Exercises on Classes
@@ -54,22 +53,23 @@ public class MyComplex {
 
   @Override
   public String toString() {
-    return new StringJoiner(" + ", "", "i")
-        .add(real + "")
-        .add(imag + "")
-        .toString();
+    if (isReal()) {
+      return String.format("%.2f", real);
+    } else if (isImaginary()) {
+      return String.format("%.2fi", imag);
+    } else {
+      return String.format("%.2f%+.2fi", real, imag);
+    }
   }
 
   public boolean equals(double real, double imag) {
-    return this.real == real
-        && this.imag == imag;
+    return this.real == real && this.imag == imag;
   }
 
   public boolean equals(MyComplex another) {
     Objects.requireNonNull(another);
 
-    return real == another.real
-        && imag == another.imag;
+    return real == another.real && imag == another.imag;
   }
 
   public double magnitude() {
@@ -86,11 +86,7 @@ public class MyComplex {
 
   public MyComplex addNew(MyComplex another) {
     Objects.requireNonNull(another);
-
-    return new MyComplex(
-        real + another.real,
-        imag + another.imag
-    );
+    return new MyComplex(real + another.real, imag + another.imag);
   }
 
   public MyComplex subtract(MyComplex another) {
@@ -104,10 +100,7 @@ public class MyComplex {
   public MyComplex subtractNew(MyComplex another) {
     Objects.requireNonNull(another);
 
-    return new MyComplex(
-        real - another.real,
-        imag - another.imag
-    );
+    return new MyComplex(real - another.real, imag - another.imag);
   }
 
   public double argument() {

@@ -1,7 +1,5 @@
 package lab8.polymorphism.movable;
 
-import java.util.StringJoiner;
-
 public class MovableCircle implements Movable {
 
   private MovablePoint center;
@@ -14,10 +12,7 @@ public class MovableCircle implements Movable {
 
   @Override
   public String toString() {
-    return new StringJoiner(", ")
-        .add(center.toString())
-        .add("radius=" + radius)
-        .toString();
+    return "MovableCircle[" + center + ", radius=" + radius + "]";
   }
 
   @Override

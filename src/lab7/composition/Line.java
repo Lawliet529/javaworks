@@ -82,10 +82,7 @@ public class Line {
   }
 
   public double getLength() {
-    return Math.sqrt(
-        Math.pow(getBeginX() - getEndX(), 2)
-            + Math.pow(getBeginY() - getEndY(), 2)
-    );
+    return Math.sqrt(Math.pow(getBeginX() - getEndX(), 2) + Math.pow(getBeginY() - getEndY(), 2));
   }
 
   public double getGradient() {

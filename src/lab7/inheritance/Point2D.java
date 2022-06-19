@@ -1,7 +1,5 @@
 package lab7.inheritance;
 
-import java.util.StringJoiner;
-
 public class Point2D {
 
   private float x;
@@ -34,7 +32,7 @@ public class Point2D {
   }
 
   public float[] getXY() {
-    return new float[]{x, y};
+    return new float[] {x, y};
   }
 
   public void setXY(float x, float y) {
@@ -44,9 +42,6 @@ public class Point2D {
 
   @Override
   public String toString() {
-    return new StringJoiner(", ", "(", ")")
-        .add("" + x)
-        .add("" + y)
-        .toString();
+    return "(" + x + ", " + y + ")";
   }
 }

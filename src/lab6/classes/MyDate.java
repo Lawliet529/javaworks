@@ -7,12 +7,17 @@ package lab6.classes;
  */
 public class MyDate {
 
-  public static final String[] MONTHS = {"Jan", "Feb", "Mar", "Apr", "May", "Jun",
-                                         "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
-  public static final String[] DAYS = {"Sunday", "Monday", "Tuesday", "Wednesday",
-                                       "Thursday", "Friday", "Saturday"};
-  public static final int[] DAYS_IN_MONTHS = {31, 28, 31, 30, 31, 30,
-                                              31, 31, 30, 31, 30, 31};
+  public static final String[] MONTHS = {
+    "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+  };
+  public static final String[] DAYS = {
+    "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+  };
+  public static final int[] DAYS_IN_MONTHS = {
+    31, 28, 31, 30, 31, 30,
+    31, 31, 30, 31, 30, 31
+  };
 
   private int year;
   private int month;
@@ -29,8 +34,7 @@ public class MyDate {
   }
 
   public static boolean isLeapYear(int year) {
-    return (year % 4 == 0 && year % 100 != 0)
-        || (year % 400 == 0);
+    return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
   }
 
   public static boolean isValidDate(int year, int month, int day) {
@@ -127,12 +131,8 @@ public class MyDate {
 
   @Override
   public String toString() {
-    return String.format("%s %s %s %s",
-        DAYS[getDayOfWeek(year, month, day)],
-        day,
-        MONTHS[month - 1],
-        year
-    );
+    return String.format(
+        "%s %s %s %s", DAYS[getDayOfWeek(year, month, day)], day, MONTHS[month - 1], year);
   }
 
   public MyDate nextDay() {

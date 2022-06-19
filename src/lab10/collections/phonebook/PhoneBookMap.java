@@ -6,8 +6,7 @@ public class PhoneBookMap implements PhoneBook {
 
   HashMap<String, Student> phoneBook;
 
-  public PhoneBookMap() {
-  }
+  public PhoneBookMap() {}
 
   @Override
   public Student searchByLastName(String s) {

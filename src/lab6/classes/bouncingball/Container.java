@@ -37,13 +37,11 @@ public class Container {
 
   public boolean collidesWith(Ball ball) {
     boolean collided = false;
-    if ((ball.getX() - ball.getRadius() <= x1)
-        || (ball.getX() + ball.getRadius() >= x2)) {
+    if ((ball.getX() - ball.getRadius() <= x1) || (ball.getX() + ball.getRadius() >= x2)) {
       ball.reflectHorizontal();
       collided = true;
     }
-    if ((ball.getY() + ball.getRadius() >= y1)
-        || (ball.getY() - ball.getRadius() <= y2)) {
+    if ((ball.getY() + ball.getRadius() >= y1) || (ball.getY() - ball.getRadius() <= y2)) {
       ball.reflectVertical();
       collided = true;
     }

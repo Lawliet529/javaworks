@@ -5,8 +5,7 @@ public class MyLinkedList<E> extends MyAbstractList<E> {
   private int size;
   private MyLinkedListNode<E> head;
 
-  public MyLinkedList() {
-  }
+  public MyLinkedList() {}
 
   @Override
   public int size() {

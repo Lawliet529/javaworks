@@ -34,7 +34,7 @@ public class Circle {
    * Constructs a Circle instance with given radius and color.
    *
    * @param radius radius for circle.
-   * @param color  color for circle.
+   * @param color color for circle.
    */
   public Circle(double radius, String color) {
     this.radius = radius;

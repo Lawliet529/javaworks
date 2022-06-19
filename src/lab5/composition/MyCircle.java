@@ -60,7 +60,7 @@ public class MyCircle {
   }
 
   public int[] getCenterXY() {
-    return new int[]{getCenterX(), getCenterY()};
+    return new int[] {getCenterX(), getCenterY()};
   }
 
   public void setCenterXY(int x, int y) {

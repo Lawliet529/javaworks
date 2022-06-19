@@ -6,8 +6,7 @@ public class MyArrayList<E> extends MyAbstractList<Object> {
   private int size;
   private Object[] elements;
 
-  public MyArrayList() {
-  }
+  public MyArrayList() {}
 
   @Override
   public int size() {

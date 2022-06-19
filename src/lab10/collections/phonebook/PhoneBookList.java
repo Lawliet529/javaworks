@@ -6,8 +6,7 @@ public class PhoneBookList implements PhoneBook {
 
   ArrayList<Student> phoneBook;
 
-  public PhoneBookList() {
-  }
+  public PhoneBookList() {}
 
   @Override
   public Student searchByLastName(String s) {

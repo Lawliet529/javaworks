@@ -37,7 +37,7 @@ public class MyPoint {
   }
 
   public int[] getXY() {
-    return new int[]{x, y};
+    return new int[] {x, y};
   }
 
   public void setXY(int x, int y) {
@@ -51,15 +51,13 @@ public class MyPoint {
   }
 
   public double distance(int x, int y) {
-    return Math.sqrt(
-        Math.pow(this.x - x, 2) + Math.pow(this.y - y, 2)
-    );
+    double dx = this.x - x;
+    double dy = this.y - y;
+    return Math.sqrt(dx * dx + dy * dy);
   }
 
   public double distance(MyPoint another) {
-    return Math.sqrt(
-        Math.pow(this.x - another.getX(), 2) + Math.pow(this.y - another.getY(), 2)
-    );
+    return distance(another.x, another.y);
   }
 
   public double distance() {
