@@ -30,23 +30,6 @@ public class CountryArrayManager {
     return this.countryDataArray;
   }
 
-  private void correct() {
-    int nullFirstIndex = 0;
-    for (int i = 0; i < this.countryDataArray.length; i++) {
-      if (this.countryDataArray[i] == null) {
-        nullFirstIndex = i;
-        break;
-      }
-    }
-
-    if (nullFirstIndex > 0) {
-      this.length = nullFirstIndex + 1;
-      for (int i = nullFirstIndex; i < this.countryDataArray.length; i++) {
-        this.countryDataArray[i] = null;
-      }
-    }
-  }
-
   private void allocateMore() {
     CountryData[] newArray = new CountryData[this.length + this.increment];
     System.arraycopy(this.countryDataArray, 0, newArray, 0, this.countryDataArray.length);
@@ -205,11 +188,7 @@ public class CountryArrayManager {
   }
 
   public CountryData[] filterMostPopulousCountries(int howMany) {
-    CountryData[] sortedArray = new CountryData[this.length];
-    for (int i = 0; i < this.length; i++) {
-      sortedArray[i] = this.countryDataArray[i];
-    }
-    sortedArray = sortDecreasingByPopulation();
+    CountryData[] sortedArray = sortDecreasingByPopulation();
     CountryData[] result = new CountryData[howMany];
     for (int i = 0; i < howMany; i++) {
       result[i] = sortedArray[i];
@@ -218,11 +197,7 @@ public class CountryArrayManager {
   }
 
   public CountryData[] filterLeastPopulousCountries(int howMany) {
-    CountryData[] sortedArray = new CountryData[this.length];
-    for (int i = 0; i < this.length; i++) {
-      sortedArray[i] = this.countryDataArray[i];
-    }
-    sortedArray = sortIncreasingByPopulation();
+    CountryData[] sortedArray = sortIncreasingByPopulation();
     CountryData[] result = new CountryData[howMany];
     for (int i = 0; i < howMany; i++) {
       result[i] = sortedArray[i];
@@ -231,11 +206,7 @@ public class CountryArrayManager {
   }
 
   public CountryData[] filterLargestAreaCountries(int howMany) {
-    CountryData[] sortedArray = new CountryData[this.length];
-    for (int i = 0; i < this.length; i++) {
-      sortedArray[i] = this.countryDataArray[i];
-    }
-    sortedArray = sortDecreasingByArea();
+    CountryData[] sortedArray = sortDecreasingByArea();
     CountryData[] result = new CountryData[howMany];
     for (int i = 0; i < howMany; i++) {
       result[i] = sortedArray[i];
@@ -244,11 +215,7 @@ public class CountryArrayManager {
   }
 
   public CountryData[] filterSmallestAreaCountries(int howMany) {
-    CountryData[] sortedArray = new CountryData[this.length];
-    for (int i = 0; i < this.length; i++) {
-      sortedArray[i] = this.countryDataArray[i];
-    }
-    sortedArray = sortIncreasingByArea();
+    CountryData[] sortedArray = sortIncreasingByArea();
     CountryData[] result = new CountryData[howMany];
     for (int i = 0; i < howMany; i++) {
       result[i] = sortedArray[i];
@@ -257,11 +224,7 @@ public class CountryArrayManager {
   }
 
   public CountryData[] filterHighestGdpCountries(int howMany) {
-    CountryData[] sortedArray = new CountryData[this.length];
-    for (int i = 0; i < this.length; i++) {
-      sortedArray[i] = this.countryDataArray[i];
-    }
-    sortedArray = sortDecreasingByGdp();
+    CountryData[] sortedArray = sortDecreasingByGdp();
     CountryData[] result = new CountryData[howMany];
     for (int i = 0; i < howMany; i++) {
       result[i] = sortedArray[i];
@@ -270,11 +233,7 @@ public class CountryArrayManager {
   }
 
   public CountryData[] filterLowestGdpCountries(int howMany) {
-    CountryData[] sortedArray = new CountryData[this.length];
-    for (int i = 0; i < this.length; i++) {
-      sortedArray[i] = this.countryDataArray[i];
-    }
-    sortedArray = sortIncreasingByGdp();
+    CountryData[] sortedArray = sortIncreasingByGdp();
     CountryData[] result = new CountryData[howMany];
     for (int i = 0; i < howMany; i++) {
       result[i] = sortedArray[i];
